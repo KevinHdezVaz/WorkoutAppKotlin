@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "492268524148",
+    "project_id": "auidaiakave",
+    "storage_bucket": "auidaiakave.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492268524148:android:706bfc1251b2114a1b7721",
+        "android_client_info": {
+          "package_name": "com.app.ayudaixm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492268524148-9o449a11j8d6i62esjdi7qrcod4l71vg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.ayudaixm",
+            "certificate_hash": "be14a2786365de198174c8c360464357487df115"
+          }
+        },
+        {
+          "client_id": "492268524148-anegvi4aj047lq4sk757974hot1flnqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwdkJRHNxWVH1BRzRyW-GAHtO1q7U3bSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492268524148-anegvi4aj047lq4sk757974hot1flnqc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "492268524148-nj2h0p9ih695a60hf59n6md9ijlb8ab9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.ayudaixm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

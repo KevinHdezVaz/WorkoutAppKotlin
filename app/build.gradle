@@ -3,16 +3,16 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-}
+ }
 
 android {
     namespace 'com.cursokotlin.todoapp'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.cursokotlin.todoapp"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -51,8 +51,7 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.3.1'
+     implementation 'androidx.activity:activity-compose:1.3.1'
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation 'androidx.compose.material:material:1.1.1'
@@ -68,9 +67,25 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.41"
 
     //LiveData
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation "androidx.compose.runtime:runtime-livedata:1.2.1"
 
 
+//lottie
+
+    implementation "com.airbnb.android:lottie-compose:4.0.0"
+//ROOM
+    // add the following lines
+    implementation("androidx.room:room-runtime:2.5.0")
+    implementation("androidx.room:room-ktx:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.27.0"
+
+    //navigation Composer
+
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+
+    //exoplayert:
+    implementation 'com.google.android.exoplayer:exoplayer:2.15.1'
 
 }
