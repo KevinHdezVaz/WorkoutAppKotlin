@@ -3,7 +3,11 @@ package com.cursokotlin.todoapp.addtasks.ui
  import VideoPlayerComposable
  import android.content.Context
 import android.net.Uri
-import androidx.compose.foundation.background
+ import android.os.Build
+ import android.os.VibrationEffect
+ import android.os.Vibrator
+ import android.os.VibratorManager
+ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -36,6 +40,7 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.cursokotlin.todoapp.R
+ import com.cursokotlin.todoapp.addtasks.util.VibrationButton
 
 
 @Composable
@@ -69,7 +74,9 @@ fun TasksScreen(navController: NavController, context : Context) {
         Button(
             modifier =
             Modifier.align(alignment = Alignment.BottomCenter).padding(bottom = 30.dp),
-            onClick = { navController.navigate("second") }) {
+            onClick = {
+                VibrationButton(context)
+                navController.navigate("second") }) {
 
             Text(text = "Empezar", color = Color.White, fontWeight = FontWeight.Bold)
         }
@@ -77,7 +84,6 @@ fun TasksScreen(navController: NavController, context : Context) {
     }
 
 }
-
 
 
 @Composable

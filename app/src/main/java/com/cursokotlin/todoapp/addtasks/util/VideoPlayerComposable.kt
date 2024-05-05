@@ -36,7 +36,7 @@ fun VideoPlayerComposable(videoUri: Uri, overlayColor: Color = Color.Black.copy(
             factory = { ctx ->
                 PlayerView(ctx).also {
                     it.player = exoPlayer
-                    it.useController = true
+                    it.useController = false
                     it.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_ZOOM
                 }
             }

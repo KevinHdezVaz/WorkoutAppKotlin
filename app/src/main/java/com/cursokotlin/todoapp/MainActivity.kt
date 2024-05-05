@@ -13,12 +13,15 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
  import androidx.compose.ui.platform.LocalContext
+ import androidx.navigation.NavType
  import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
-import com.cursokotlin.todoapp.addtasks.ui.TasksScreen
+ import androidx.navigation.navArgument
+ import com.cursokotlin.todoapp.addtasks.ui.TasksScreen
 import com.cursokotlin.todoapp.addtasks.ui.TasksViewModel
+ import com.cursokotlin.todoapp.addtasks.ui.inicio.ScreenHeight
  import com.cursokotlin.todoapp.ui.theme.TodoAppTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
@@ -42,6 +45,12 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = "first") {
                     composable("first") { TasksScreen(navController, LocalContext.current) }
                     composable("second") { ScreenGenders(navController) }
+                    composable("tercero/{gender}",
+                        arguments = listOf(navArgument("gender") { type = NavType.StringType })) { backStackEntry ->
+                        // Asegúrate de manejar el caso donde el género puede no ser pasado correctamente
+                        val gender = backStackEntry.arguments?.getString("gender") ?: "Unknown"
+                        ScreenHeight(navController, gender)
+                    }
                 }
             }
         }
