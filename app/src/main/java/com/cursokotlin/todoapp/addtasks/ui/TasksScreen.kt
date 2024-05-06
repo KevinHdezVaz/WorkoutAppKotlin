@@ -40,6 +40,7 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.cursokotlin.todoapp.R
+ import com.cursokotlin.todoapp.addtasks.ui.inicio.ExerciseListScreen
  import com.cursokotlin.todoapp.addtasks.util.VibrationButton
 
 
@@ -63,6 +64,7 @@ fun TasksScreen(navController: NavController, context : Context) {
             composition,
             iterations = LottieConstants.IterateForever
         )
+        ExerciseListScreen()
 
         LottieAnimation(
 

@@ -21,7 +21,9 @@ import androidx.navigation.compose.rememberNavController
  import androidx.navigation.navArgument
  import com.cursokotlin.todoapp.addtasks.ui.TasksScreen
 import com.cursokotlin.todoapp.addtasks.ui.TasksViewModel
+ import com.cursokotlin.todoapp.addtasks.ui.inicio.ExerciseListScreen
  import com.cursokotlin.todoapp.addtasks.ui.inicio.ScreenHeight
+ import com.cursokotlin.todoapp.addtasks.ui.viewmodel.ExerciseViewModel
  import com.cursokotlin.todoapp.ui.theme.TodoAppTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,16 +31,18 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    private val viewModel: ExerciseViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             TodoAppTheme {
                 val systemUiController = rememberSystemUiController()
                 val statusBarColor = Color(0xFF050217)
 
-                SideEffect {
+                 SideEffect {
                     systemUiController.setStatusBarColor(statusBarColor)
                 }
                 val navController = rememberNavController()
